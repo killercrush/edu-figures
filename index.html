@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Курсовая работа ООП</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="canv" width="800" height="600">
+
+    </canvas>
+    <div class="controls" >
+      <p>
+        <label>
+          <span>Угол:</span>
+          <input type="range" id="angle-control" value="0" min="0" max="360">
+          <span id="angle-value">0</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <span>Размер:</span>
+          <input type="range" id="size-control" value="50" min="50" max="300" step="5">
+          <span id="size-value">50</span>
+        </label>
+      </p>
+      <p>
+        <label><span>Цвет:</span> <input class="jscolor" id="color-control" value="ab2567"></label>
+      </p>
+      <div>
+        <h3>Инструменты</h3>
+        <input type="radio" name="tool" id="square" value="square" checked>
+        <label for="square">Квадрат</label>
+        <input type="radio" name="tool" id="circle" value="circle">
+        <label for="circle">Круг</label>
+        <input type="radio" name="tool" id="triangle" value="triangle">
+        <label for="triangle">Треугольник</label>
+        <input type="radio" name="tool" id="selection" value="selection">
+        <label for="selection">Выделение</label>
+        <button onclick="deleteAll()">Удалить все</button>
+      </div>
+      <p>
+        Управление: 1,2,3 - случайная фигура; стрелки двигать выделенную фигуру; стрелки вверх/вниз + шифт - размер;
+        стрелки влево/вправо + шифт - угол; пробел - следующая фигура; delete - удалить выделенную фигуру
+      </p>
+
+      <!-- <button type="button" id="btn-square" name="button">Квадрат</button>
+      <button type="button" id="btn-circle" name="button">Круг</button>
+      <button type="button" id="btn-triangle" name="button">Треугольник</button> -->
+    </div>
+  </body>
+  <script type="text/javascript" src="lib/fabric.js"></script>
+  <script type="text/javascript" src="lib/jscolor.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</html>
